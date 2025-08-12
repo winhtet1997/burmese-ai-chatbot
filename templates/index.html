@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chatbot</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7T6006CGEJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7T6006CGEJ');
+    </script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=33">
+    <!-- Inject static assets path for JS usage -->
+    <script>
+        const ASSET_PATH = "{{ url_for('static', filename='assets/') }}";
+    </script>
+</head>
+
+<body>
+    <div class="chat-header">
+        <a href="ALL##REDIRECT##HOME" class="back-button chat-link-button" id="back-button">
+            <img src="/static/assets/arrow.png" alt="Back" class="back-icon" />
+        </a>
+        <span class="chat-title">Dobby</span>
+    </div>
+    <div class="chat-container">
+        <div class="intro-message" id="introMessage">
+            <div class="bot-icon-center">
+                <img src="/static/assets/dobby.png" alt="Bot Icon" />
+            </div>
+            <p class="intro-text">Welcome to your personal AI bot – Dobby.<br>Ask me anything!</p>
+            <div class="suggestions">
+                <button class="suggestion">E sim<br>E sim ဘယ်လိုပြောင်းရလဲ<br>How to change to esim?</button>
+                <button class="suggestion">Call Forwarding<br>Call Forwarding ဖြစ်နေရင်ဘယ်လိုဖျက်ရမလဲ<br>How to remove call forwarding?</button>
+                <button class="suggestion">Balance<br>ဘေလ်ဘယ်လိုစစ်ရမလဲ<br>How to check balance?</button>
+            </div>
+        </div>
+        <div class="chat-box" id="chatbox"></div>
+    </div>
+    <footer>
+        <div class="input-area">
+            <textarea type="text" id="user-input" placeholder="Write a message..." autocorrect="on" spellcheck="true" autocomplete="on" lang="en"></textarea>
+            <button id="send-button">
+                <img src="{{ url_for('static', filename='assets/send.png') }}" class="send-icon" id="send-icon"
+                    style="display: none;" />
+                <img src="{{ url_for('static', filename='assets/mic.png') }}" class="voice-icon" id="voice-icon" />
+            </button>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=40"></script>
+</body>
+
+</html>

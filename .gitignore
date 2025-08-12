@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Environments
+env/
+venv/
+ENV/
+.venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# Flask cache
+instance/
+*.db
+
+# Redis dump
+dump.rdb
+
+# Mac/Linux file attributes
+*.swp
+
+# Node (if any frontend dependencies added later)
+node_modules/
+
+# Deployment
+*.egg-info/
+dist/
+build/

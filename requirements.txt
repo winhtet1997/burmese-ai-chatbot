@@ -1,0 +1,5 @@
+Flask==2.3.3
+flask-cors==4.0.0
+requests==2.31.0
+google-auth==2.29.0
+redis==5.0.4
